@@ -29,21 +29,13 @@ class _MyWidgetState extends State<Drawers> {
             ),
             child: Column(
               children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(25),
-                  child: Image.asset(
-                    'asset/images/onboarding.png',
-                    height: 100,
-                    width: 100,
-                    fit: BoxFit.cover,
-                  ),
-                ),
-                SizedBox(
-                  height: 5,
+                Icon(
+                  Icons.person,
+                  size: 65,
                 ),
                 Text(
                   FirebaseAuth.instance.currentUser!.displayName!,
-                  style: TextStyle(fontSize: 15),
+                  style: TextStyle(fontSize: 20),
                 ),
                 Text(
                   FirebaseAuth.instance.currentUser!.email!,
